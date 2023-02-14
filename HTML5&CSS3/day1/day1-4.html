@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>audio | video</title>
+  </head>
+  <body>
+    <button>play sound</button>
+    <audio>
+      <source src="./notification_sound.mp3" />
+      Your browser does not support the audio element
+    </audio>
+    <video
+      controls
+      muted
+      width="300px"
+      poster="https://play-lh.googleusercontent.com/vzHVyL8G7birnPZ0zuCQQ2uDxuLIXzYOUGjFDFzIqfx-ww1fq8IysoEiWzhWI3Dw08g"
+    >
+      <source src="./sample.mp4" />
+      <source src="./sample.ogv" />
+      <source src="./sample.webm" />
+      Your browser does not support the video element
+    </video>
+    <script>
+      var s = document.querySelector("audio");
+      document
+        .querySelector("button")
+        .addEventListener("mouseover", function () {
+          if (s.paused) {
+            s.play();
+            console.log("playing...");
+          }
+          //  else {
+          //   s.pause();
+          //   console.log("stop...");
+          // }
+        });
+    </script>
+  </body>
+</html>

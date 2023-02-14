@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <style>
+        canvas{
+            margin-left: 40%;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <img id="smileyimg" width="200" height="200" src="./smiley.png">
+    <img id="img1" width="200" height="200" src="./sad.png">
+  
+    <canvas id="Canvas1" onmouseover="smaile()"  onmouseout="sad()"
+    width="300" height="300" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    
+
+    <script>
+      var Canvas1 = document.getElementById("Canvas1");
+      var ctx = Canvas1.getContext("2d");
+      var img1 = document.getElementById("img1");
+      var smileyimg = document.getElementById("smileyimg");
+
+   var x= window.onload = function () {
+      ctx.drawImage(img1, 70,60 ,150 ,150);     
+    }
+
+    function smaile(){
+        ctx.drawImage(smileyimg, 0,0,300 ,300);
+    }
+
+    function sad() {
+        ctx.fillStyle="white";
+        ctx.fillRect(0,0,300,300);
+        x();     
+   }
+    </script>
+    
+    </body>
+</html>

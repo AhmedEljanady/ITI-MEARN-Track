@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>face</title>
+    <style>
+      .face {
+        fill: gold;
+      }
+
+      .mouth {
+        fill: none;
+        stroke: #000;
+        stroke-width: 5px;
+        stroke-linecap: round;
+        transform: translate(15, 65);
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg class="smiley" whidth="600" hight="200" viewBox="0 0 256 256">
+      <circle class="face" cx="50" cy="50" r="50" />
+      <circle
+        class="left-eye"
+        cx="30"
+        cy="30"
+        r="10"
+        onmouseover="evt.target.setAttribute('fill', 'blue'); console.log('left-eye');"
+        onmouseout="evt.target.setAttribute('fill','black');"
+      />
+      <circle
+        class="right-eye"
+        cx="70"
+        cy="30"
+        r="10"
+        onmouseover="evt.target.setAttribute('fill', 'blue'); console.log('right-eye');"
+        onmouseout="evt.target.setAttribute('fill','black');"
+      />
+      <ellipse
+        id="yellowellipse"
+        cx="50"
+        cy="73"
+        rx="20"
+        ry="20"
+        fill="black"
+        onmouseover="evt.target.setAttribute('fill', 'green'); console.log('mouth')"
+        onmouseout="evt.target.setAttribute('fill','black');"
+      />
+    </svg>
+  </body>
+</html>

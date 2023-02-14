@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nav</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        width: 71%;
+        height: 50px;
+        margin: 30px auto 30px 30px;
+        background-color: #555;
+        border-radius: 5px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+      nav li {
+        width: 19%;
+        height: 50px;
+        /* display: flex; */
+        justify-content: space-between;
+        /* margin-right: 0.5%; */
+      }
+
+      nav a {
+        width: 15px;
+        align-items: center;
+        justify-content: center;
+      }
+      .icon {
+        /* width: 48px; */
+        color: white;
+      }
+
+      .x:hover {
+        background-color: #4caf50;
+        border-radius: 5px;
+        transition: all 0.5s;
+      }
+      .x {
+        /* width: 48px; */
+        padding: 10px 20px;
+      }
+      /* ------------------------------------------ */
+      .ppp {
+        font-family: "Cairo", sans-serif;
+        column-count: 3;
+      }
+      @font-face {
+        font-family: "ahmed";
+        src: url("./IslandMoments-Regular.ttf");
+      }
+      .ooo {
+        font-family: "ahmed";
+      }
+      /* -------------------------------------------- */
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="icon"><i class="fa-solid fa-house x"></i></a>
+        </li>
+
+        <li>
+          <a href="#" class="icon"><i class="fa-solid fa-envelope x"></i></a>
+        </li>
+
+        <li>
+          <a href="#" class="icon"
+            ><i class="fa-solid fa-earth-americas x"></i
+          ></a>
+        </li>
+
+        <li>
+          <a href="#" class="icon"><i class="fa-solid fa-trash-can x"></i></a>
+        </li>
+        <li class="xx" onclick="opensearch()">
+          <a href="#" class="icon"
+            ><i class="fa-solid fa-magnifying-glass x"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <p class="ppp">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque tempora
+        expedita ad neque aspernatur nulla dicta, magnam quos facere?
+        Consequatur enim minima nobis omnis illo corporis assumenda
+        consequuntur! Autem, soluta.lor Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Quam sapiente quae, reiciendis adipisci quibusdam
+        laborum cumque maiores harum saepe architecto asperiores molestiae rem,
+        neque hic provident a incidunt eum animi! Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Magni dolorum nobis quas quia, non velit
+        aut voluptatibus molestias rem nam quod temporibus ullam dolor unde
+        dolores quibusdam voluptatem iure aliquid.
+      </p>
+      <br />
+      <p class="ooo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque tempora
+        expedita ad neque aspernatur nulla dicta, magnam quos facere?
+        Consequatur enim minima nobis omnis illo corporis assumenda
+        consequuntur! Autem, soluta.lor Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Quam sapiente quae, reiciendis adipisci quibusdam
+        laborum cumque maiores harum saepe architecto asperiores molestiae rem,
+        neque hic provident a incidunt eum animi! Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Magni dolorum nobis quas quia, non velit
+        aut voluptatibus molestias rem nam quod temporibus ullam dolor unde
+        dolores quibusdam voluptatem iure aliquid.
+      </p>
+    </div>
+    <!-- <div>
+      <button onclick="opensearch()">s</button>
+    </div>
+    <input type="search" /> -->
+    <script>
+      // document.querySelector("x").addEventListener("mousehover", function () {
+      //   document.querySelector("xx").innerHTML = "<input type='search' />";
+      // });
+      // function opensearch() {
+      //   document.querySelector(".xx").innerHTML =
+      //     '<input type="search" class="x"/>';
+      // }
+      // function close() {
+      //   document.querySelector(".xx").innerHTML =
+      //     '<a href="#" class="icon"><i class="fa-solid fa-magnifying-glass x"></i></a>';
+      // }
+      // document.querySelector(".xx").style.transition = "all 2s";
+    </script>
+  </body>
+</html>

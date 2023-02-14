@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2-3</title>
+    <style>
+      .cont {
+        border-radius: 50px;
+        overflow: hidden;
+      }
+      .test {
+        padding: 10px 20px;
+        border-radius: 50px;
+        transition: all 0.3s;
+        transform: translateX(-82%);
+        border: none;
+        background-color: #aaa;
+      }
+      .test:hover {
+        transform: translateX(-50%);
+      }
+      .open {
+        transform: translateX(0%) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <input type="search" class="test" />
+    </div>
+  </body>
+  <script>
+    var input = document.querySelector(".test");
+    input.onclick = function () {
+      if (this === document.activeElement) {
+        input.classList.add("open");
+      }
+    };
+    document.onclick = function () {
+      if (input != document.activeElement) {
+        input.classList.remove("open");
+      }
+    };
+  </script>
+</html>

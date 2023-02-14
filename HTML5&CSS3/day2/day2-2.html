@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>gallary</title>
+    <style>
+      main div {
+        display: inline-block;
+        overflow: hidden;
+      }
+      .ca {
+        width: 150px;
+        /* height: 150px; */
+      }
+      .ca:hover {
+        transform: scale(1.3);
+        transition: all 0.5s;
+      }
+      /* ------------------------------ */
+      @keyframes tiger {
+        0% {
+          top: 150px;
+          right: 10px;
+        }
+        50% {
+          top: 150px;
+          right: 90%;
+          /* transform: rotateX("180deg");
+          transform: rotateY("180deg"); */
+        }
+        100% {
+          top: 150px;
+          right: 10px;
+        }
+      }
+      body {
+        position: relative;
+      }
+      .tiger {
+        width: 100px;
+        animation: tiger;
+        animation-duration: 10s;
+        position: absolute;
+        animation-iteration-count: 3;
+      }
+      /* ------------------------------ */
+      .row {
+        display: flex;
+        border-radius: 100px;
+        overflow: hidden;
+      }
+      .card {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: all 0.5s;
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      span {
+        width: 200px;
+        height: 40px;
+        border-radius: 100px;
+        color: #fff;
+        background-color: rgb(45, 129, 45);
+        font-size: 16px;
+        padding: 5px 10px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        transform: translateX(-100%);
+        position: relative;
+        transition: all 0.5s;
+      }
+      .open {
+        transform: translateX(-50px) !important;
+      }
+      /* span::after {
+        position: absolute;
+        content: "x";
+        color: #fff;
+        font-weight: 700;
+        right: 18px;
+        top: 25%;
+      } */
+      .x {
+        position: absolute;
+        width: 24px;
+        right: 0;
+        top: 32%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div><img class="ca" src="./gallery-1.jpg" alt="" /></div>
+      <div><img class="ca" src="gallery-2.jpg" alt="" /></div>
+      <div><img class="ca" src="gallery-3.jpg" alt="" /></div>
+      <div><img class="ca" src="gallery-4.jpg" alt="" /></div>
+      <!-- -------------------------------------- -->
+      <img src="tiger.gif" alt="" class="tiger" />
+      <br /><br /><br />
+      <br /><br /><br />
+      <div class="row">
+        <img
+          class="card"
+          src="https://www.w3schools.com/w3images/avatar2.png"
+        />
+        <span> Ahmed Khaled<i class="fa-solid fa-xmark x"></i></span>
+      </div>
+    </main>
+    <script>
+      document.querySelector(".card").onclick = function () {
+        document.querySelector("span").classList.add("open");
+      };
+      document.querySelector(".x").onclick = function () {
+        document.querySelector("span").classList.remove("open");
+      };
+      // var open = function () {
+      //   document.querySelector("span").classList.add("open");
+      //   console.log("dd");
+      // };
+      // opne();
+    </script>
+  </body>
+</html>
