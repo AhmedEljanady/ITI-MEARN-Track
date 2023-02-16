@@ -1,0 +1,71 @@
+h1 {
+  color: #eee;
+}
+
+.container {
+  width: 87.5%;
+  margin: 50px auto;
+}
+
+header {
+  text-align: center;
+}
+header .img {
+  background-image: url(https://simad.edu.so/fass/wp-content/uploads/2021/06/8b167af653c2399dd93b952a48740620.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+section {
+  width: 100%;
+}
+section .content {
+  display: flex;
+  justify-content: space-between;
+}
+section .content div {
+  flex-direction: column;
+  width: 18.75%;
+}
+
+.achievements .content div {
+  width: 31.25%;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  background-color: #eee;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+footer div {
+  width: 25%;
+}
+footer div h3 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .img {
+    content: url(https://www.w3schools.com/w3images/avatar2.png);
+  }
+  main,
+  footer {
+    width: 100% !important;
+  }
+  .content,
+  footer {
+    display: block !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

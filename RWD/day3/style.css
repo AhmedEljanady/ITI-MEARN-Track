@@ -1,0 +1,124 @@
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+}
+
+.hero {
+  margin: 90px 0;
+  display: flex;
+}
+.hero .hero-content {
+  padding: 0 24px;
+}
+.hero .hero-img {
+  padding: 0 24px;
+}
+.hero .hero-img .img {
+  background-image: url(https://imgs.search.brave.com/Y_wMHn-VdDevaRJD8VfqqnoOHVRNjeyhaCLIgqmsB50/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5s/aW9ubGVhZi5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTQv/MTEvMTQxNTI3NV8y/MjgyMTgyMS5qcGc);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 80%;
+  height: 140%;
+}
+
+.header, .footer {
+  background-color: #607d8b;
+  padding: 6px 12px;
+}
+
+.cards-sec .cards {
+  display: flex;
+}
+.cards-sec .cards .card {
+  padding: 0 24px;
+}
+.cards-sec .cards .card__name--blue, .cards-sec .cards .card__name--dark {
+  background-color: #3f51b5;
+  padding: 8px 0;
+  color: #fff;
+}
+.cards-sec .cards .movies--blue {
+  color: #3f51b5;
+}
+.cards-sec .cards .card__name--dark {
+  background-color: #111;
+}
+.cards-sec .cards .movies--dark {
+  color: #111;
+}
+
+@media only screen and (max-width: 600px) {
+  [class*=col-] {
+    width: 100%;
+  }
+  .img {
+    background-image: url(https://imgs.search.brave.com/Y_wMHn-VdDevaRJD8VfqqnoOHVRNjeyhaCLIgqmsB50/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5s/aW9ubGVhZi5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTQv/MTEvMTQxNTI3NV8y/MjgyMTgyMS5qcGc);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 80%;
+    height: 80%;
+    display: block;
+  }
+  .hero {
+    display: block;
+  }
+  .cards {
+    display: block !important;
+    padding: 0 !important;
+  }
+  .card--dark {
+    margin-top: 24px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

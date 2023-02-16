@@ -1,0 +1,101 @@
+$total: 12;
+@function column-Width($columnNumber) {
+  @return percentage($columnNumber/$total);
+}
+
+@for $i from 1 through $total {
+  .col-#{$i} {
+    width: column-Width($i);
+  }
+}
+// * {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
+
+$mainColor: #607d8b;
+$indigoColor: #3f51b5;
+$black: #111;
+
+header {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+}
+
+.hero {
+  margin: 90px 0;
+  display: flex;
+
+  .hero-content {
+    padding: 0 24px;
+  }
+  .hero-img {
+    padding: 0 24px;
+    .img {
+      background-image: url(https://imgs.search.brave.com/Y_wMHn-VdDevaRJD8VfqqnoOHVRNjeyhaCLIgqmsB50/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5s/aW9ubGVhZi5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTQv/MTEvMTQxNTI3NV8y/MjgyMTgyMS5qcGc);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 80%;
+      height: 140%;
+    }
+  }
+}
+.header {
+  background-color: $mainColor;
+  padding: 6px 12px;
+}
+
+.footer {
+  @extend .header;
+}
+.cards-sec {
+  .cards {
+    display: flex;
+    .card {
+      padding: 0 24px;
+    }
+    .card__name--blue {
+      background-color: $indigoColor;
+      padding: 8px 0;
+      color: #fff;
+    }
+    .movies--blue {
+      color: $indigoColor;
+    }
+    .card__name--dark {
+      @extend .card__name--blue;
+      background-color: $black;
+    }
+    .movies--dark {
+      color: $black;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  .img {
+    background-image: url(https://imgs.search.brave.com/Y_wMHn-VdDevaRJD8VfqqnoOHVRNjeyhaCLIgqmsB50/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5s/aW9ubGVhZi5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTQv/MTEvMTQxNTI3NV8y/MjgyMTgyMS5qcGc);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 80%;
+    height: 80%;
+    display: block;
+  }
+  .hero {
+    display: block;
+  }
+  .cards {
+    display: block !important;
+    // overflow: hidden;
+    padding: 0 !important;
+  }
+  .card--dark {
+    margin-top: 24px;
+  }
+}

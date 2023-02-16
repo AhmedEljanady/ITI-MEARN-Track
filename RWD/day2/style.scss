@@ -1,0 +1,132 @@
+$mainColor: #eee;
+
+h1 {
+  color: $mainColor;
+}
+@mixin col-1 {
+  width: 6.25%;
+}
+@mixin col-2 {
+  width: 12.5%;
+}
+@mixin col-3 {
+  width: 18.75%;
+}
+@mixin col-4 {
+  width: 25%;
+}
+@mixin col-5 {
+  width: 31.25%;
+}
+@mixin col-6 {
+  width: 37.5%;
+}
+@mixin col-7 {
+  width: 43.75%;
+}
+@mixin col-8 {
+  width: 50%;
+}
+@mixin col-9 {
+  width: 56.25%;
+}
+@mixin col-10 {
+  width: 62.5%;
+}
+@mixin col-11 {
+  width: 68.75%;
+}
+@mixin col-12 {
+  width: 75%;
+}
+@mixin col-13 {
+  width: 81.25%;
+}
+@mixin col-14 {
+  width: 87.5%;
+}
+@mixin col-15 {
+  width: 93.75%;
+}
+@mixin col-16 {
+  width: 100%;
+}
+//------------------//
+
+.container {
+  @include col-14();
+  margin: 50px auto;
+}
+
+header {
+  text-align: center;
+  .img {
+    background-image: url(https://simad.edu.so/fass/wp-content/uploads/2021/06/8b167af653c2399dd93b952a48740620.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+}
+
+section {
+  @include col-16();
+  .content {
+    display: flex;
+    justify-content: space-between;
+    div {
+      flex-direction: column;
+      @include col-3();
+    }
+  }
+}
+.achievements {
+  .content {
+    div {
+      @include col-5();
+    }
+  }
+}
+// .content {
+//   display: flex;
+// }
+
+h2 {
+  @include col-16();
+  text-align: center;
+  background-color: $mainColor;
+}
+
+footer {
+  @include col-16();
+  display: flex;
+  margin-top: 30px;
+  div {
+    @include col-4();
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .img {
+    content: url(https://www.w3schools.com/w3images/avatar2.png);
+  }
+  // [class*="col-"] {
+  //   width: 100%;
+  // }
+  main,
+  footer {
+    width: 100% !important;
+  }
+  .content,
+  footer {
+    display: block !important;
+  }
+  // footer {
+  //   @extend .content;
+  // }
+}
