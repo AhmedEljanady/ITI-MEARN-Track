@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 6</title>
+    <style>
+      body {
+        display: flex;
+      }
+      .task1 img {
+        width: 300px;
+        height: 300px;
+      }
+      .task1-control {
+        margin: 24px;
+        display: flex;
+        gap: 12px;
+      }
+      .task2 {
+        margin: 50px 25px;
+        padding: 12px 24px;
+      }
+      /* .task3 {
+        float: right;
+      } */
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 200px;
+      }
+      .form input {
+        display: block;
+      }
+      table {
+        width: 700px;
+      }
+      .warning {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="task1">
+      <img src="./SlideShow/1.jpg" alt="" />
+      <div class="task1-control">
+        <button class="prev">Perv</button>
+        <button class="slide">SlideShow</button>
+        <button class="stop">Stop</button>
+        <button class="next">Next</button>
+      </div>
+      <div class="task2">
+        <input class="task2" type="text" onkeydown="preventCharacters(event)" />
+      </div>
+    </div>
+    <div class="task3">
+      <div class="form">
+        <form action="" onsubmit="test(event)">
+          Name: <input type="text" class="input0" /> Age:
+          <input type="number" class="input1" id="" /> Email:
+          <input type="email" class="input2" id="" />
+          <p class="warning"></p>
+          <button type="submit" class="submit">add</button>
+          <button type="reset" class="reset">reset</button>
+        </form>
+      </div>
+      <table border="solid red 1px" style="margin-top: 50px">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+        </tr>
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> -->
+      </table>
+    </div>
+
+    <script src="main6.js"></script>
+  </body>
+</html>

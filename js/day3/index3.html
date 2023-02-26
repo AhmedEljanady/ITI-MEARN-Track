@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var nameReg = /^[A-Za-z]{4,20}$/;
+      var teleReg = /^\d{8}$/;
+      var mobileReg = /^(010|011|012|015)[0-9]{8}$/; //^(010|011|012|015)\d{8}$
+      var emailReg = /^[A-Za-z]+@\d+\.com$/;
+      //   do {
+      //     var name = prompt("enter your name");
+      //   } while (nameReg.test(name) == false);
+      //   do {
+      //     var telephone = prompt("enter your telephone");
+      //   } while (teleReg.test(telephone) == false);
+      //   do {
+      //     var mobileNumber = prompt("enter your mobile number");
+      //   } while (mobileReg.test(mobileNumber) == false);
+      //   do {
+      //     var email = prompt("enter your email");
+      //   } while (emailReg.test(email) == false);
+      //   //  // var name = "ahmed";
+      //   //  // var telephone = 888888;
+      //   //  // var mobileNumber = 0105466141;
+      //   //  // var email = "asd@123.com";
+      //   var color = prompt("choose prefer color: [red, green or blue]");
+      var date = new Date(2022, 11, 18, 14, 30, 56);
+      var display = function (str) {
+        document.write(
+          ("welcome dear guest ".fontcolor(str) + name + "<br><br>")
+            .bold()
+            .fontsize(48)
+        );
+        document.write(
+          (
+            "your telephone number is:   ".fontcolor(str) +
+            telephone +
+            "<br>"
+          ).fontsize(6)
+        );
+        document.write(
+          (
+            "your mobile number is:   ".fontcolor(str) +
+            mobileNumber +
+            "<br>"
+          ).fontsize(6)
+        );
+        document.write(
+          (
+            "your email address is:   ".fontcolor(str) +
+            email +
+            "<br><br><br>"
+          ).fontsize(6)
+        );
+        document.write("today is: ".fontcolor(str) + date.getDate() + "<br>");
+        document.write(
+          "we are in month: ".fontcolor(str) +
+            (Number(date.getMonth()) + 1) +
+            "<br>"
+        );
+        document.write(
+          "and year: ".fontcolor(str) + date.getFullYear() + "<br>"
+        );
+        document.write(
+          "the time: ".fontcolor(str) + date.toDateString() + "<br>"
+        );
+      };
+      switch (color) {
+        case "red":
+          display("red");
+          break;
+        case "blue":
+          display("blue");
+          break;
+        case "green":
+          display("green");
+          break;
+        default:
+          display("black");
+      }
+    </script>
+  </head>
+  <body>
+    <script src="main3.js"></script>
+  </body>
+</html>

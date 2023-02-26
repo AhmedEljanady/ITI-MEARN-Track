@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>countDown</title>
+    <style>
+      .counterDown {
+        display: flex;
+        margin: 50px;
+      }
+      .countDown {
+        width: 100px;
+        height: 100px;
+        border: 5px solid darkgreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .numsDown {
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .countDown span {
+        position: absolute;
+        top: -40px;
+        font-size: 28px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="counterDown">
+      <div class="countDown">
+        <span>days</span>
+        <div class="days numsDown"></div>
+      </div>
+      <div class="countDown">
+        <span>hours</span>
+        <div class="hours numsDown"></div>
+      </div>
+      <div class="countDown">
+        <span>minutes</span>
+        <div class="min numsDown"></div>
+      </div>
+      <div class="countDown">
+        <span>seconds</span>
+        <div class="sec numsDown"></div>
+      </div>
+    </div>
+    <script>
+      const countdownEl = document.querySelector(".counterDown");
+      const secEl = document.querySelector(".sec");
+      const minEl = document.querySelector(".min");
+      const hoursEl = document.querySelector(".hours");
+      const daysEl = document.querySelector(".days");
+
+      let saleEndDateMiliSec = new Date("Tue Jan 31 2023 22:49:25").getTime();
+      let dateNow = new Date().getTime();
+      let countdown = saleEndDateMiliSec - dateNow;
+
+      const updateCountdown = () => {
+        const days = Math.floor(countdown / (24 * 60 * 60 * 1000));
+        const hours = Math.floor(
+          (countdown % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)
+        );
+        const minutes = Math.floor(
+          (countdown % (60 * 60 * 1000)) / (60 * 1000)
+        );
+        const seconds = Math.floor((countdown % (60 * 1000)) / 1000);
+
+        daysEl.innerHTML = days.toString().padStart(2, "0");
+        hoursEl.innerHTML = hours.toString().padStart(2, "0");
+        minEl.innerHTML = minutes.toString().padStart(2, "0");
+        secEl.innerHTML = seconds.toString().padStart(2, "0");
+
+        countdown -= 1000;
+
+        if (days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
+          // countdownEl.innerHTML = "";
+          countdownEl.remove();
+        }
+      };
+
+      updateCountdown();
+      const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>

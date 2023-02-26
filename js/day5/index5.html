@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 5</title>
+    <style>
+      .div1,
+      .div2 {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        margin: 100px;
+      }
+
+      .div2 img {
+        opacity: 0.3;
+        transition: all 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <img class="img" src="marbels/marble1.jpg" alt="" />
+      <img class="img" src="marbels/marble1.jpg" alt="" />
+      <img class="img" src="marbels/marble1.jpg" alt="" />
+      <img class="img" src="marbels/marble1.jpg" alt="" />
+      <img class="img" src="marbels/marble1.jpg" alt="" />
+    </div>
+    <!-- <div
+      class="div2"
+      onmouseover="changeOpacity(event.target,this)"
+      onmouseleave="increaseOpacity(event.target,this)"
+    >
+      <img src="marbels/marble1.jpg" alt="" />
+      <img src="marbels/marble1.jpg" alt="" />
+      <img src="marbels/marble1.jpg" alt="" />
+      <img src="marbels/marble1.jpg" alt="" />
+      <img src="marbels/marble1.jpg" alt="" />
+    </div> -->
+    <div class="div2">
+      <img
+        onmouseover="changeOpacity(this)"
+        onmouseleave="increaseOpacity(this)"
+        src="marbels/marble1.jpg"
+        alt=""
+      />
+      <img
+        onmouseover="changeOpacity(this)"
+        onmouseleave="increaseOpacity(this)"
+        src="marbels/marble1.jpg"
+        alt=""
+      />
+      <img
+        onmouseover="changeOpacity(this)"
+        onmouseleave="increaseOpacity(this)"
+        src="marbels/marble1.jpg"
+        alt=""
+      />
+      <img
+        onmouseover="changeOpacity(this)"
+        onmouseleave="increaseOpacity(this)"
+        src="marbels/marble1.jpg"
+        alt=""
+      />
+      <img
+        onmouseover="changeOpacity(this)"
+        onmouseleave="increaseOpacity(this)"
+        src="marbels/marble1.jpg"
+        alt=""
+      />
+    </div>
+    <script src="main5.js"></script>
+  </body>
+</html>

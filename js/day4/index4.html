@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="day3.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="index4-1.html" method="get" target="_blank">
+      <input
+        type="text"
+        name="userName"
+        placeholder="Enter your user name here"
+      />
+      <input type="password" name="password" />
+      <input type="submit" value="log in" />
+    </form>
+    <br />
+    <div>
+      <button onclick="openWindow()">Open new window</button>
+    </div>
+    <br />
+    <div></div>
+    <!-- <script src="main4.js"></script> -->
+    <script>
+      var newWindow;
+      function openWindow() {
+        newWindow = open(
+          "index4-2.html",
+          "_blank",
+          "width=300,height=400,screenX=300,screenY=100"
+        );
+      }
+    </script>
+  </body>
+</html>
