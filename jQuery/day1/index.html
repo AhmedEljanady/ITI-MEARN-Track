@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+      .div2 {
+        width: 100px;
+        background-color: darkblue;
+      }
+      .div2-2 {
+        width: 200px;
+        background-color: darkred;
+      }
+      .margin {
+        margin: 50px;
+      }
+      .task8 {
+        width: 700px;
+        margin: 0 auto;
+      }
+      .panel {
+        background-color: #555;
+        padding: 12px 24px;
+        margin-bottom: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">hello using jQuery</div>
+    <button class="btn1">change div</button>
+    <br />
+    <hr />
+    <br />
+    <div class="div2">task 2</div>
+    <br />
+    <hr />
+    <br />
+    <!-- <div class="div1">hello using jQuery</div> -->
+    <button class="btn2">calc width</button>
+    <br />
+    <hr />
+    <br />
+    <button class="btn3">add class</button>
+    <br />
+    <hr />
+    <br />
+    <p id="testId">task 6</p>
+    <br />
+    <hr />
+    <br />
+    <p class="p7">task 7</p>
+    <br />
+    <hr />
+    <br />
+    <div class="task8">
+      <div class="panel panel1">panel 1</div>
+      <p class="p8 p8-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+        necessitatibus quaerat velit explicabo quidem nesciunt! Praesentium
+        autem libero architecto tenetur dolores. Ipsa, nostrum exercitationem
+        dignissimos cumque animi necessitatibus consectetur earum!
+      </p>
+      <div class="panel panel2">panel 2</div>
+      <p class="p8 p8-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+        necessitatibus quaerat velit explicabo quidem nesciunt! Praesentium
+        autem libero architecto tenetur dolores. Ipsa, nostrum exercitationem
+        dignissimos cumque animi necessitatibus consectetur earum!
+      </p>
+      <div class="panel panel3">panel 3</div>
+      <p class="p8 p8-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+        necessitatibus quaerat velit explicabo quidem nesciunt! Praesentium
+        autem libero architecto tenetur dolores. Ipsa, nostrum exercitationem
+        dignissimos cumque animi necessitatibus consectetur earum!
+      </p>
+      <div class="panel panel4">panel 4</div>
+      <p class="p8 p8-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+        necessitatibus quaerat velit explicabo quidem nesciunt! Praesentium
+        autem libero architecto tenetur dolores. Ipsa, nostrum exercitationem
+        dignissimos cumque animi necessitatibus consectetur earum!
+      </p>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        $(".btn1").click(() => {
+          $(".div1").css("border", "3px solid red");
+        });
+        // task 2
+        $(".div2").mouseover(function () {
+          $(this).toggleClass("div2-2");
+        });
+        //task 3
+        $(".btn2").click(() => {
+          console.log($(".div1").outerWidth());
+        });
+        // task 4
+        $(".btn3").click(() => {
+          $(".div1").addClass("margin");
+        });
+        // task 5
+        $("button").after("<p>task 5</p>");
+        // task 6
+        $("<span>Hello World!</span>").appendTo("#testId");
+        // task 7
+        $(".p7").on({
+          mouseenter: function () {
+            $(this).css({ "font-weight": "800", color: "red" });
+          },
+          mouseleave: function () {
+            $(this).css({ "font-weight": "400", color: "green" });
+          },
+        });
+        // task 8
+        // $(".p8").slideUp();
+        $(".panel").click(function () {
+          $(this).next().slideToggle();
+        });
+        // $(".panel2").click(() => {
+        //   $(".p8-2").slideToggle();
+        // });
+        // $(".panel3").click(() => {
+        //   $(".p8-3").slideToggle();
+        // });
+        // $(".panel4").click(() => {
+        //   $(".p8-4").slideToggle();
+        // });
+        // task 9
+        // $("p").remove();
+      });
+    </script>
+  </body>
+</html>

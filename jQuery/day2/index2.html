@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+      #div1 {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">Start Animation</button>
+    <!-- <button id="btn2">Stop Animation</button> -->
+    <div id="div1">task 3</div>
+    <script>
+      $("#btn1").click(function () {
+        $("#div1")
+          .animate(
+            {
+              width: "400px",
+              height: "300px",
+              color: "white",
+              backgroundColor: "black",
+            },
+            2000
+          )
+          .animate(
+            { width: "100px", height: "100px", backgroundColor: "white" },
+            3000
+          );
+      });
+      // $("#btn2").click(function () {
+      //   $("#div1").stop()
+      // })
+    </script>
+  </body>
+</html>

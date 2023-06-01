@@ -1,0 +1,15 @@
+{
+  "name": "unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive day1/test/  --timeout 10000"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}

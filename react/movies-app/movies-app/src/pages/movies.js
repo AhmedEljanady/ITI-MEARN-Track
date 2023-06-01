@@ -5,29 +5,28 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import axiosInstance from "../axiosConfig/instance";
 import { addFavorirts, removeFavorirts } from "../store/action/action";
-// import changeMovies from "../store/action/movies";
+import changeMovies from "../store/action/movies";
 
 // import Pagination from "../components/pagination/pagination";
-//TODO:
+//TODO: pagination not works
 const Movies = () => {
-  // const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const favorites = useSelector((state) => state.favorites.fav);
   const movies = useSelector((state) => state.movies.movies);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     axiosInstance
-      .get(`3/movie/popular?page=${page}`)
+      .get(`customer`)
       .then((res) => {
         setPage(res.data.page);
-        // setMovies(res.data.results);
       })
       .catch((err) => {
         console.log(err);
       });
+    dispatch(changeMovies());
   }, [page]);
 
-  const dispatch = useDispatch();
   function handleAddFav(el) {
     dispatch(addFavorirts(el));
   }

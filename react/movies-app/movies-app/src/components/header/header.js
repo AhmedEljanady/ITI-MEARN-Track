@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Container from "react-bootstrap/Container";
 // import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
+import { langContext } from "../../context/langueges";
 const Header = () => {
+  const { lang, setLang } = useContext(langContext);
   return (
     <Navbar bg="light" expand="lg" className="w-100">
       <Container>
@@ -23,9 +25,17 @@ const Header = () => {
             <Link to="/about" className="navLink">
               About
             </Link>
-            <Link to="/login" className="navLink ms-5">
+            <Link to="/login" className="navLink mx-5">
               Login
             </Link>
+            <button
+              className="btn btn-success"
+              onClick={() => {
+                lang === "ar" ? setLang("en") : setLang("ar");
+              }}
+            >
+              {lang}
+            </button>
           </Navbar>
         </Navbar.Collapse>
       </Container>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cards">Cards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pagination">pagination</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">footer</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="cards row my-5" id="cards">
+        <div class="card col-md-3 col-6">
+          <img
+            src="https://imgs.search.brave.com/LtUW7HZDoRG9yb_6oswi0Ka7PWwzL1ZyO6OIKcCf0Sk/rs:fit:640:960:1/g:ce/aHR0cHM6Ly8yZi56/b2wtaW1nLmNvbS5j/bi9wcm9kdWN0LzY3/LzQ5My9jZVdXZ0R6/Y1JEQTFFLmpwZw"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h2 class="card-text">Some quick example</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card col-md-3 col-6">
+          <img
+            src="https://imgs.search.brave.com/V09hpq_5sXj1zzlpsfUmXGySNvw3z56wBPgLtf7mjaw/rs:fit:640:960:1/g:ce/aHR0cHM6Ly8yYy56/b2wtaW1nLmNvbS5j/bi9wcm9kdWN0LzY3/LzUwMi9jZVdObndr/UVhrZzYyLmpwZw"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h2 class="card-text">Some quick example</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card col-md-3 col-6">
+          <img
+            src="https://imgs.search.brave.com/M3nIkle5JlNj8I0Z46-Wi5NC2lKK7_USsC2CKjUjdXo/rs:fit:640:960:1/g:ce/aHR0cHM6Ly8yZC56/b2wtaW1nLmNvbS5j/bi9wcm9kdWN0LzY3/LzQ5Ny9jZVllQkgz/a2Z0QlZJLmpwZw"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h2 class="card-text">Some quick example</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card col-md-3 col-6">
+          <img
+            src="https://imgs.search.brave.com/tnpx6RHqQcjGrkuA96IKUGDDyiA3RKqnBXPNB-s7a3s/rs:fit:640:960:1/g:ce/aHR0cHM6Ly8yYS56/b2wtaW1nLmNvbS5j/bi9wcm9kdWN0LzY3/LzUwMC9jZVJtd1JK/ajEzNG5zLmpwZw"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h2 class="card-text">Some quick example</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card col-md-3 col-6">
+          <img
+            src="https://imgs.search.brave.com/qYA7F3E54ZPqkLCcXwe-8WlYh3XRLBqFm-Lwg4QvozM/rs:fit:640:960:1/g:ce/aHR0cHM6Ly8yYi56/b2wtaW1nLmNvbS5j/bi9wcm9kdWN0LzY3/LzUwMS9jZU4yZGRG/bU1nUDlBLmpwZw"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h2 class="card-text">Some quick example</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card col-md-3 col-6">
+          <img
+            src="https://imgs.search.brave.com/oE_4ZfNd4S-3laPfIUDzkviulfsKjPyTS5g-8Nqe_DE/rs:fit:640:960:1/g:ce/aHR0cHM6Ly93d3cu/c2V0YXN3YWxsLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/Ny8wOS9FYXJ0aC1D/bGlmZi1RdS1XYWxs/cGFwZXItNjQwLXgt/OTYwLmpwZw"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h2 class="card-text">Some quick example</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card col-md-3 col-6">
+          <img
+            src="https://imgs.search.brave.com/AO7k57N2QMH5xPCYAk3w8HvGzxJQfZRzhvN43VDG5oQ/rs:fit:640:960:1/g:ce/aHR0cHM6Ly8yYS56/b2wtaW1nLmNvbS5j/bi9wcm9kdWN0LzY3/LzQ5NC9jZTFXYXJX/YjlLMjBZLmpwZw"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h2 class="card-text">Some quick example</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card col-md-3 col-6">
+          <img
+            src="https://imgs.search.brave.com/DDLM9X0plU9JfLNExPslAlub4YntXenGSL_U_SOnszI/rs:fit:640:960:1/g:ce/aHR0cHM6Ly8yYi56/b2wtaW1nLmNvbS5j/bi9wcm9kdWN0LzY3/LzQ4OS9jZXlVUUk5/bk1FZUJvLmpwZw"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h2 class="card-text">Some quick example</h2>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <nav aria-label="Page navigation example " id="pagination">
+        <ul class="pagination d-flex justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="slider">
+        <p class="h2 d-flex justify-content-center mt-5">
+          About Me, The Food Man
+        </p>
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1665203467468-1b473f008895?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1665203467468-1b473f008895?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1665203467468-1b473f008895?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <p class="h2 d-flex justify-content-center">I am Who I Am!</p>
+        <p class="d-flex justify-content-center">
+          sit amet consectetur adipisicing
+        </p>
+        <p class="d-flex justify-content-center px-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+          laudantium nam. Eum perspiciatis a sed dolor illo officia nemo beatae?
+          Suscipit placeat quo ullam est reprehenderit quis vitae veritatis ea.
+        </p>
+      </div>
+    </div>
+    <div class="row p-5">
+      <footer class="col-sm-4 col-12" id="footer">
+        <p class="h3">FOOTER</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus at
+          corporis pariatur natus officiis vel beatae adipisci
+        </p>
+      </footer>
+      <div class="col-sm-4 col-12">
+        <p class="h3">BLOG POSTS</p>
+        <div class="row">
+          <img
+            src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            class="img-thumbnail col-6"
+            alt="..."
+            style="width: 100px; height: 100px"
+          />
+          <p class="col-6">natus officiis vel beatae</p>
+        </div>
+        <div class="row">
+          <img
+            src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            class="img-thumbnail col-6"
+            alt="..."
+            style="width: 100px; height: 100px"
+          />
+          <p class="col-6">natus officiis vel beatae</p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-12">
+        <p class="h2">POPULAR TAGS</p>
+        <div>
+          <span class="badge text-bg-dark">Lorem</span>
+          <span class="badge text-bg-dark">ipsum</span>
+          <span class="badge text-bg-dark">dolor</span>
+          <span class="badge text-bg-dark">sit</span>
+          <span class="badge text-bg-dark">amet</span>
+          <span class="badge text-bg-dark">natus</span>
+          <span class="badge text-bg-dark">beatae</span>
+          <span class="badge text-bg-dark">adipisci</span>
+          <span class="badge text-bg-dark">Dark</span>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

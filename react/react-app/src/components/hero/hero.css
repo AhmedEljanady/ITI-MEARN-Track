@@ -1,0 +1,10 @@
+.hero {
+  background-image: url(https://imgs.search.brave.com/4CoZtOiQcoKonPTgxOcRt2ABzevge6pSPpTx9vTMg6A/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDAxLzIx/Ny8yMTAvb3JpZ2lu/YWwvYmluYXJ5LWNv/ZGUtYmFja2dyb3Vu/ZC12ZWN0b3IuanBn);
+  height: 50vh;
+  width: 100%;
+}
+
+.hero-det {
+  transform: translateX(-25%);
+  /* margin: auto; */
+}
